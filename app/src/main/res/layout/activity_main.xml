@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/frame"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/bgheader"
+        android:layout_height="350dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/logo"
+                android:layout_marginTop="50dp"
+                />
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/card"
+
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="250dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/et_nip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_style"
+                android:hint="Masukkan NIP"
+                android:padding="@dimen/activity_horizontal_margin"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_pswd"
+                android:background="@drawable/et_style"
+                android:layout_marginTop="10dp"
+                android:hint="MAC Address"
+                android:editable="false"
+                android:focusable="false"
+                android:padding="@dimen/activity_horizontal_margin"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/btnlogin"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_gravity="center"
+            android:background="@drawable/button_oval"
+            android:text="Lanjut"
+            android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/card"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#054171"
+        android:text="Apabila Lupa NIP Harap Hubungi Petugas Admin"/>
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
